@@ -7,7 +7,7 @@ namespace HngX.StageOne.Models
         [Display(Name = "slack_name")]
         public string? SlackName { get; set; }
         public string? CurrentDay { get; set; }
-        public DateTime UtcTime { get; set; }
+        public string? UtcTime { get; set; }
         public string? Track { get; set; }
         public string? GithubFileUrl { get; set; }
         public string? GithubRepoUrl { get; set; }

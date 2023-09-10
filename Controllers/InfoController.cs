@@ -12,13 +12,14 @@ namespace HngX.StageOne.Controllers
         [HttpGet]
         public IActionResult GetInfo(string slack_name, string track)
         {
+            DateTimeOffset currentUtcTime = DateTimeOffset.UtcNow;
             var data = new Info
             {
                 SlackName = slack_name,
-                CurrentDay = DateTime.Now.DayOfWeek.ToString(),
-                UtcTime = DateTime.UtcNow,
+                CurrentDay = DateTime.UtcNow.DayOfWeek.ToString(),
+                UtcTime = currentUtcTime.ToString("yyyy-MM-ddTHH:mm:ss.ffZ"),
                 Track = track,
-                GithubFileUrl = "https://github.com/username/repo/blob/main/file_name.ext",
+                GithubFileUrl = "https://github.com/IEdiong/hngx-backend-s1/blob/main/Program.cs",
                 GithubRepoUrl = "https://github.com/IEdiong/hngx-backend-s1",
                 StatusCode = 200
             };
@@ -26,4 +27,3 @@ namespace HngX.StageOne.Controllers
         }
     }
 }
-
