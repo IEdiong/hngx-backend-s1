@@ -17,7 +17,7 @@ namespace HngX.StageOne.Controllers
             {
                 SlackName = slack_name,
                 CurrentDay = DateTime.UtcNow.DayOfWeek.ToString(),
-                UtcTime = currentUtcTime.ToString("yyyy-MM-ddTHH:mm:ss.ffZ"),
+                UtcTime = currentUtcTime.ToString("yyyy-MM-ddTHH:mm:ffZ"),
                 Track = track,
                 GithubFileUrl = "https://github.com/IEdiong/hngx-backend-s1/blob/main/Program.cs",
                 GithubRepoUrl = "https://github.com/IEdiong/hngx-backend-s1",
